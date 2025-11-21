@@ -18,6 +18,7 @@
       align-items: center;
       justify-content: center;
       background: linear-gradient(135deg, #f9a8d4, #6366f1);
+      padding: 20px;
     }
 
     .card {
@@ -30,6 +31,14 @@
       text-align: center;
     }
 
+    /* Logo styling */
+    .logo {
+      width: 140px;
+      margin: 0 auto 1.25rem;
+      display: block;
+      border-radius: 24px;
+    }
+
     h1 {
       font-size: 1.9rem;
       margin-bottom: 0.5rem;
@@ -39,6 +48,7 @@
       font-size: 0.95rem;
       color: #4b5563;
       margin-bottom: 1.5rem;
+      line-height: 1.4;
     }
 
     .badge {
@@ -96,15 +106,8 @@
       color: #6b7280;
     }
 
-    .logo {
-      width: 120px;
-      margin: 0 auto 1rem;
-      display: block;
-    }
-
     @media (max-width: 480px) {
       .card {
-        margin: 1.5rem;
         padding: 1.5rem;
       }
     }
@@ -113,24 +116,28 @@
 <body>
   <div class="card">
 
-    <!-- LOGO ADDED HERE -->
+    <!-- LOGO -->
     <img src="onlygirls-logo.png" alt="OnlyGirls Logo" class="logo">
 
     <div class="badge">Women-only community · Coming soon</div>
     <h1>OnlyGirls</h1>
+
     <p class="subtitle">
-      A safe, women-only space to share your life, get advice, and connect with a supportive community.
-      Be the first to know when we launch.
+      A safe, women-only space to share your life, get advice, and connect
+      with a supportive community. Be the first to know when we launch.
     </p>
 
-    <!-- FIXED EMAIL -->
-    <form action="mailto:inshaulhaque@gmail.com" method="post" enctype="text/plain">
+    <!-- FORM USING FORMSPREE -->
+    <form action="https://formspree.io/f/xjkldrqk" method="POST">
+      <input type="hidden" name="_subject" value="New OnlyGirls Waitlist Signup">
+
       <input
         type="email"
         name="email"
         placeholder="Enter your email address"
         required
       />
+
       <button type="submit">Join the waitlist</button>
     </form>
 
